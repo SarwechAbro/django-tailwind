@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="flex flex-col items-center justify-center h-screen">
+        
+		<form action="{% url 'login' %}" method="post" class="bg-white p-6 w-120 rounded-md hover:shadow-lg ">
+             <h1 class="text-xl text-center bg-green-300 p-5 text-white rounded-md mb-6">Login to Your Account</h1>
+			{% csrf_token %}
+			<div class="mb-4">
+				<label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+				<input type="text" name="username" id="username" required class="mt-1 block w-full border-gray-300 rounded-md  p-2 border-blue-500 border focus:ring focus:ring-blue-500 focus:ring-opacity-100">
+			</div>
+			<div class="mb-4">
+				<label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+				<input type="password" name="password" id="password" required class="mt-1 block w-full border-gray-300 p-2 rounded-md border-blue-500 border focus:ring focus:ring-blue-500 focus:ring-opacity-100">
+			</div>
+			<div class="flex items-center justify-center p-10 bg-blue-600">
+				<button type="submit" class="bg-green-500 px-4 py-2 cursor-pointer text-white rounded">Login</button>
+			</div>
+		</form>
+	</div>
+{% endblock %}
