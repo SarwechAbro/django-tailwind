@@ -37,13 +37,12 @@ jobs:
           cd todo/theme/static_src     
           npm install
 
-      - name: backing directory for tailwind build
-        run: |
-          cd todo     
+    
            
 
       - name: Build Tailwind CSS
         run: |
+          cd todo
           python manage.py tailwind build
 
       - name: Collect static files
