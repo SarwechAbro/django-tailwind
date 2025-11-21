@@ -34,7 +34,7 @@ jobs:
 
       - name: Install Tailwind dependencies (django-tailwind)
         run: |
-          cd theme     # your Tailwind app folder (change if needed)
+          cd todo/theme     # your Tailwind app folder (change if needed)
           npm install
 
       - name: Build Tailwind CSS
