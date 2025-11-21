@@ -53,7 +53,7 @@ jobs:
       - name: Upload static output as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./staticfiles  # folder created by collectstatic
+          path: ./todo/staticfiles  # folder created by collectstatic
 
   deploy:
     needs: build
