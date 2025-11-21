@@ -47,6 +47,7 @@ jobs:
 
       - name: Collect static files
         run: |
+          cd todo
           python manage.py collectstatic --noinput
 
       - name: Upload static output as GitHub Pages artifact
